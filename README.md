@@ -1,5 +1,3 @@
-# Mario-corre-deslizador
-
 # PRD: Mario Runner - Juego Arduino Esplora
 
 ## 1. Resumen Ejecutivo
@@ -7,7 +5,7 @@
 **Nombre del Proyecto:** Mario Runner Arduino
 **Plataforma:** Arduino Esplora + p5.js
 **Tipo de Juego:** Endless Runner en tercera persona
-**Duración Estimada de Desarrollo:** 4-6 semanas
+**Duración Estimada de Desarrollo:** 2-3 semanas
 
 ### Descripción General
 Juego de plataformas tipo "endless runner" donde Mario corre continuamente esquivando obstáculos, controlado mediante sensores físicos del Arduino Esplora para crear una experiencia inmersiva y única.
@@ -49,7 +47,9 @@ Arduino Esplora → Serial Port → p5.serialport → p5.js → Canvas HTML5
 
 #### Movimiento Horizontal (Eje X)
 - **Sensor:** Linear Potentiometer del Arduino Esplora
-- **Rango:** -1 a +1 (normalizado)
+- **Función Arduino:** `Esplora.readSlider()`
+- **Rango Real:** 0-1023 (10-bit ADC, 0-5V)
+- **Resolución:** 4.9mV por unidad
 - **Función:** Controla la posición lateral de Mario
 - **Responsividad:** Tiempo real, sin lag perceptible
 
@@ -195,11 +195,15 @@ Arduino Esplora → Serial Port → p5.serialport → p5.js → Canvas HTML5
 ## 11. Criterios de Éxito
 
 ### Funcionalidad Mínima Viable (MVP)
-- ✅ Mario se mueve lateralmente con el potenciómetro
-- ✅ Mario salta con input de micrófono
-- ✅ Obstáculos aparecen y se mueven hacia el jugador
-- ✅ Detección de colisiones funcional
-- ✅ Sistema básico de puntuación
+- ✅ p5.serialport app instalada y funcionando en localhost:8080
+- ✅ Comunicación serial estable (115200 baud) via WebSocket
+- ✅ Lectura correcta de `Esplora.readSlider()` y `Esplora.readMicrophone()`
+- ✅ Parsing de datos "slider,mic\n" en p5.js con eventos serial
+- ✅ Mario se mueve lateralmente con el potenciómetro (0-1023 → posición X)
+- ✅ Mario salta con input de micrófono (umbral > 300)
+- [ ] Obstáculos aparecen y se mueven hacia el jugador
+- [ ] Detección de colisiones funcional
+- [ ] Sistema básico de puntuación
 
 ### Funcionalidad Completa
 - [ ] Múltiples tipos de obstáculos
