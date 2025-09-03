@@ -1,0 +1,58 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #cce5ff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0002;
+  padding: 24px 12px;
+}
+
+h1 {
+  margin-top: 0;
+  color: #e63946;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 #2d3142;
+}
+
+#sketch-holder {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#estado {
+  font-size: 1.1em;
+  margin: 12px 0;
+  color: #222;
+}
+
+#instrucciones {
+  background: #e0e0e0;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 12px auto 0 auto;
+  font-size: 0.95em;
+  color: #333;
+}
+
+#restart-btn {
+  margin-top: 18px;
+  font-size: 1.1em;
+  background: #43aa8b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#restart-btn:hover {
+  background: #2d6a4f;
+}
