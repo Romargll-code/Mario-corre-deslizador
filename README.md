@@ -243,6 +243,6 @@ Arduino Esplora → Serial Port → p5.serialport → p5.js → Canvas HTML5
 
 ---
 
-**Documento creado por:** [Tu nombre]  
+**Documento creado por:** JORGE ROMERO
 **Fecha:** Septiembre 2025  
 **Versión:** 1.0
